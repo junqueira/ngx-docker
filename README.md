@@ -1,14 +1,14 @@
-# angular2 no Container
+# angular2 no container
 
-Embora não seja realmente difícil, levei bastante tempo para usar angular-cli no meu Mac em um container docker.
+  Embora não seja realmente difícil, levei bastante tempo para usar angular-cli no meu Mac em um container docker.
 
-Este projeto contém meus pensamentos iniciais para criar, desenvolver e executar facilmente um aplicativo Angular 2 com container docker.
+  Este projeto contém meus pensamentos iniciais para criar, desenvolver e executar facilmente um aplicativo Angular 2 com container docker.
 
-Ideia geral
+# Ideia geral
 
-Este projeto fornece 2 Dockerfiles. O primeiro Dockerfile está contido na raiz e responsável pela configuração de uma imagem contendo uma versão específica (atualmente é v1.0.0-beta.28.3) de angular-cli. Ele também prepara um usuário não-root. No entanto, isso não deve ser usado até que o projeto inicial é criado com ng novo. As permissões de raiz são necessárias para criar o projeto.
+  Este projeto fornece 2 Dockerfiles. O primeiro Dockerfile está contido na raiz e responsável pela configuração de uma imagem contendo uma versão específica (atualmente é v1.0.0-beta.28.3) de angular-cli. Ele também prepara um usuário não-root. No entanto, isso não deve ser usado até que o projeto inicial é criado com ng novo. As permissões de raiz são necessárias para criar o projeto.
 
-Uma vez que o projeto inicial é criado com base Dockerfile, ambos os arquivos de docker-app-seed podem ser copiados para o recém-criado Angular 2 App. Esses arquivos permitem instalar todas as dependências dentro de um contêiner e executar comandos específicos do projeto oferecidos por angular-cli (por exemplo, ng servir).
+  Uma vez que o projeto inicial é criado com base Dockerfile, ambos os arquivos de docker-app-seed podem ser copiados para o recém-criado Angular 2 App. Esses arquivos permitem instalar todas as dependências dentro de um contêiner e executar comandos específicos do projeto oferecidos por angular-cli (por exemplo, ng servir).
 
 ## Creating a new Angular 2 App
 
