@@ -6,18 +6,18 @@
 
 # Ideia geral
 
-  Este projeto fornece 2 Dockerfiles. O primeiro Dockerfile está contido na raiz e responsável pela configuração de uma imagem contendo uma versão específica (atualmente é v1.0.0-beta.28.3) de angular-cli. Ele também prepara um usuário não-root. No entanto, isso não deve ser usado até que o projeto inicial é criado com ng novo. As permissões de raiz são necessárias para criar o projeto.
+  Este projeto fornece 2 Dockerfiles. O primeiro Dockerfile está contido na raiz e responsável pela configuração de uma imagem contendo uma versão específica (atualmente é v1.0.0-beta.32.3) de angular-cli. Ele também prepara um usuário não-root. No entanto, isso não deve ser usado até que o projeto inicial é criado com ng novo. As permissões de raiz são necessárias para criar o projeto.
 
   Uma vez que o projeto inicial é criado com base Dockerfile, ambos os arquivos de docker-app-seed podem ser copiados para o recém-criado Angular 2 App. Esses arquivos permitem instalar todas as dependências dentro de um contêiner e executar comandos específicos do projeto oferecidos por angular-cli (por exemplo, ng servir).
 
 ## Creating a new Angular 2 App
 
-You simply copy the [Dockerfile](Dockerfile) and call `docker build -t angular-cli:1.0.0-beta.28.3 .` in the same folder. This will create an image containing the appropriate angular-cli version.
+You simply copy the [Dockerfile](Dockerfile) and call `docker build -t angular-cli:1.0.0-beta.32.3 .` in the same folder. This will create an image containing the appropriate angular-cli version.
 
 This new image can now be used to create the basis for your new Angular 2 App. Simply call 
 
 ```
-docker run -it --rm --name create-angular-project -v "$PWD":/home/app angular-cli:1.0.0-beta.28.3 ng new -sn APP_NAME
+docker run -it --rm --name create-angular-project -v "$PWD":/home/app angular-cli:1.0.0-beta.32.3 ng new -sn APP_NAME
 ```
 
 Obviously you should replace `APP_NAME` with the name of the app you like to build.
