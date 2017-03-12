@@ -1,14 +1,14 @@
-# angular-cli in a Container
+# angular2 no Container
 
-Although it is not really difficult, it took me quite some time to use [angular-cli](https://github.com/angular/angular-cli) on my Mac in a docker container.
+Embora não seja realmente difícil, levei bastante tempo para usar angular-cli no meu Mac em um container docker.
 
-This project contains my initial thoughts for easily creating, developing and running an Angular 2 App with docker container.
+Este projeto contém meus pensamentos iniciais para criar, desenvolver e executar facilmente um aplicativo Angular 2 com container docker.
 
-## General Idea
+Ideia geral
 
-This project provides 2 Dockerfiles. The first [Dockerfile](Dockerfile) is contained in root and responsible for setting up an image containing a specific version (currently this is v1.0.0-beta.28.3) of angular-cli. It also prepares a non-root user. However, this shouldn't be used until the initial project is created with `ng new`. Root permissions are required to create the project.
+Este projeto fornece 2 Dockerfiles. O primeiro Dockerfile está contido na raiz e responsável pela configuração de uma imagem contendo uma versão específica (atualmente é v1.0.0-beta.28.3) de angular-cli. Ele também prepara um usuário não-root. No entanto, isso não deve ser usado até que o projeto inicial é criado com ng novo. As permissões de raiz são necessárias para criar o projeto.
 
-Once the initial project is created with base Dockerfile, both files from [docker-app-seed](docker-app-seed) can be copied into the newly created Angular 2 App. These files allow installing all dependencies inside a container and running project specific commands offered by angular-cli (e.g. `ng serve`).
+Uma vez que o projeto inicial é criado com base Dockerfile, ambos os arquivos de docker-app-seed podem ser copiados para o recém-criado Angular 2 App. Esses arquivos permitem instalar todas as dependências dentro de um contêiner e executar comandos específicos do projeto oferecidos por angular-cli (por exemplo, ng servir).
 
 ## Creating a new Angular 2 App
 
